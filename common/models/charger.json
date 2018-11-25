@@ -1,0 +1,35 @@
+{
+  "name": "Charger",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "required": true
+    },
+    "location": {
+      "type": "geopoint",
+      "required": true
+    },
+    "hostname": {
+      "type": "string"
+    },
+    "port": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "reservations": {
+      "type": "hasMany",
+      "model": "Reservation",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Reservation",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "startTime": {
+      "type": "date",
+      "required": true
+    },
+    "endTime": {
+      "type": "date",
+      "required": true
+    },
+    "reservationState": {
+      "type": "string"
+    },
+    "vehicleDistance": {
+      "type": "number",
+      "required": true
+    },
+    "stateUpdateTime": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "charger": {
+      "type": "belongsTo",
+      "model": "Charger",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
